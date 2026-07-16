@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중고차 목록 관리</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <!-- [페이지 헤더] 수강생 구현 #1 -->
+      <h1>중고차 목록 관리</h1>
+      <p>차량 정보를 등록하고 관리하는 CRUD 실습</p>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2>차량 정보 입력</h2>
+
+        <!-- 차령 정보 입력 폼 -->
+        <form id="carForm" class="car-form">
+          <!-- 제조사 정보 -->
+          <div class="form-row">
+            <!-- [제조사 목록] 수강생 구현 #2 -->
+            <label for="makerInput">제조사</label>
+            <select id="makerInput">
+              <option value="">제조사 선택</option>
+              <option value="현대">현대</option>
+              <option value="기아">기아</option>
+              <option value="제네시스">제네시스</option>
+              <option value="쉐보레">쉐보레</option>
+              <option value="르노">르노</option>
+            </select>
+          </div>
+
+          <!-- 모델명 -->
+          <div class="form-row">
+            <!-- [모델명] 수강생 구현 #3 -->
+            <label for="modelInput">모델명</label>
+            <input type="text" id="modelInput" placeholder="예: 쏘나타" />
+          </div>
+
+          <!-- 연식 -->
+          <div class="form-row">
+            <!-- [연식] 수강생 구현 #4 -->
+            <label for="yearInput">연식</label>
+            <input type="number" id="yearInput" placeholder="예: 2021" />
+          </div>
+
+          <!-- 주행거리 -->
+          <div class="form-row">
+            <!-- [주행거리(Km)] 수강생 구현 #5 -->
+            <label for="mileageInput">주행거리(km)</label>
+            <input type="number" id="mileageInput" placeholder="예: 43000" />
+          </div>
+
+          <!-- 가격 -->
+          <div class="form-row">
+            <!-- [가격(만원)] 수강생 구현 #6 -->
+            <label for="priceInput">가격(만원)</label>
+            <input type="number" id="priceInput" placeholder="예: 1850" />
+          </div>
+
+          <!-- 연료 -->
+          <div class="form-row">
+            <!-- [연료 목록] 수강생 구현 #7 -->
+            <label for="fuelInput">연료</label>
+            <select id="fuelInput">
+              <option value="">연료 선택</option>
+              <option value="가솔린">가솔린</option>
+              <option value="디젤">디젤</option>
+              <option value="LPG">LPG</option>
+              <option value="하이브리드">하이브리드</option>
+              <option value="전기">전기</option>
+            </select>
+          </div>
+
+          <!-- 판매 상태 -->
+          <div class="form-row">
+            <!-- [판매 상태 목록] 수강생 구현 #8 -->
+            <label for="statusInput">판매 상태</label>
+            <select id="statusInput">
+              <option value="판매중">판매중</option>
+              <option value="예약중">예약중</option>
+              <option value="판매완료">판매완료</option>
+            </select>
+          </div>
+          <!-- 등록 / 취소 버튼 -->
+          <div class="button-area">
+            <!-- [등록/취소 버튼] 수강생 구현 #9 -->
+            <button type="submit" id="submitButton">등록</button>
+            <button type="button" id="cancelEditButton" hidden>
+              수정 취소
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 차량 목록 -->
+      <section class="list-card">
+        <div class="list-header">
+          <h2>차량 목록</h2>
+          <p id="countText">전체 0대 / 표시 0대</p>
+        </div>
+
+        <!-- 차량 검색 -->
+        <div class="search-area">
+          <!-- [차량 검색 및 필터 목록] 수강생 구현 #10 -->
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="제조사 또는 모델명 검색"
+          />
+          <select id="statusFilter">
+            <option value="전체">전체</option>
+            <option value="판매중">판매중</option>
+            <option value="예약중">예약중</option>
+            <option value="판매완료">판매완료</option>
+          </select>
+        </div>
+
+        <!-- empty 메시지 -->
+        <p id="emptyMessage" class="empty-message">등록된 차량이 없습니다.</p>
+
+        <!-- 차량 목룍 -->
+        <div id="carList" class="car-list"></div>
+      </section>
+    </main>
+  </body>
+</html>
