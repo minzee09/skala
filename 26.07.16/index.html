@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        기본 script를 만나면 HTML 파싱을 잠시 중단하고 JavaScript를 실행한다.
+
+        아직 body가 파싱되지 않았기 때문에 화면에 표시할 콘텐츠도 준비되지 않은 상태다.
+        외부 JS 다운로드나 실행 시간이 길면 초기 화면 표시가 늦어질 수 있다.
+    -->
+    <script></script>
+
+    <!--
+        HTML 파싱과 동시에 JS 파일을 다운로드한다.
+        HTML 파싱을 방해하지 않으며, HTML 파싱이 끝난 후 JavaScript를 실행한다.
+    -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!--
+        body 파싱 도중 script를 만나면 HTML 파싱이 중단된다.
+
+        아래에 있는 h1은 아직 파싱되지 않았기 때문에
+        DOM에도 만들어지지 않았고 화면에도 표시될 수 없다.
+    -->
+    <script></script>
+
+    <h1>JS Rendering</h1>
+
+    <!--
+        h1을 먼저 파싱한 후 JavaScript를 실행한다.
+
+        단, h1이 파싱되었다고 해서 반드시 이미 화면에 그려졌다는 뜻은 아니다.
+        브라우저가 실제 화면을 그리기 전에 JavaScript가 실행될 수도 있다.
+
+        즉,
+        파싱: HTML을 읽어서 DOM 구조를 만드는 과정
+        렌더링: DOM과 CSS를 기반으로 실제 화면에 표시하는 과정
+    -->
+    <script></script>
+</body>
+</html>
