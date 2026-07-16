@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- // 아래 스크립트를 여기다가 넣으면 body가 파싱되기 전에 실행되므로 동작 하지 않는다.
+    // 이걸 window.onload = function() {} 안에 넣으면 body가 파싱된 후 실행되므로 동작한다. -->
 </head>
 <body>
-    <input type="text" id="nums" value="1,2,3,4,5" />
+    <h1 id="result"></h1>
+    <input onclick="test()" type="text" id="nums" value="1,2,3,4,5" />
+    <button onclick="test()">버튼</button>
+    <button id="up">UP</button>
+    <button id="clear">CLEAR</button>
     <script>
         let nums = document.querySelector("#nums");
         console.log('1', nums);
@@ -14,10 +20,39 @@
         let numArr = nums.value.split(",");
         console.log('3', numArr);
         console.log('4', typeof numArr[0]);
-
         console.log('5', Math.max(...numArr));
-
         console.log('6', numArr.map(Number).join(' '));
+        nums.value = 'hi';
+
+        // 이벤트 붙이는 방법 3가지
+
+        // 이게 활성화되면 onclick 속성에 지정한 함수는 무시
+        // nums.onclick = function() {
+        //     alert("input clicked");
+        // }
+
+        nums.addEventListener('click', function() {
+            alert("addeventlistener clicked");
+        });
+
+        function test() {
+            alert("tag clicked");
+        }
+
+        let div = document.querySelector("#result");
+        div.addEventListener('click', ()=>alert("div clicked"));
+
+        let count = 0;
+        let upBtn = document.querySelector("#up");
+        upBtn.addEventListener('click', function() {
+            div.innerHTML = count++;
+        });
+
+        let clearBtn = document.querySelector("#clear");
+        clearBtn.addEventListener('click', function() {
+            count = 0;
+            div.innerHTML = count;
+        });
     </script>
 </body>
 </html>
