@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "맑은 고딕", sans-serif;
+  color: #222;
+  background-color: #f3f4f6;
+}
+
+.page-header {
+  padding: 32px 20px;
+  text-align: center;
+  color: white;
+  background-color: #1f2937;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 32px auto;
+
+  /* 입력 영역과 목록 영역을 2열로 배치한다. */
+  /* TODO: [입력 영역 / 목록 영역 2열 배치 ] 수강생 구현 #1 */
+
+}
+
+.form-card,
+.list-card {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2,
+.list-card h2 {
+  margin: 0 0 18px;
+}
+
+.car-form {
+  display: grid;
+  gap: 14px;
+}
+
+.form-row {
+  /* TODO: [form -row] 수강생 구현 #2 */
+ 
+}
+
+.form-row label {
+  /* TODO: [form-row lable] 수강생 구현 #3 */
+  
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.button-area {
+  /* TODO: [button-area] 수강생 구현 #4 */
+  
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#submitButton {
+  color: white;
+  background-color: #2563eb;
+}
+
+#cancelEditButton {
+  background-color: #e5e7eb;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#countText {
+  margin: 0;
+  color: #666;
+}
+
+.search-area {
+  /* TODO: [search-area] 수강생 구현 #5 */
+ 
+}
+
+.car-list {
+  /* TODO: [car-list] 수강생 구현 #6 */
+  
+}
+
+.car-card {
+  /* TODO: [car-card] 수강생 구현 #7 */
+  
+}
+
+.car-card h3 {
+  margin: 0 0 10px;
+}
+
+.car-card p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.status-badge.selling {
+  color: #065f46;
+  background-color: #d1fae5;
+}
+
+.status-badge.reserved {
+  color: #92400e;
+  background-color: #fef3c7;
+}
+
+.status-badge.sold {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+.card-actions {
+  /* TODO: [car-actions] 수강생 구현 #8 */
+  
+}
+
+.card-actions button {
+  /* TODO: [card-actions button] 수강생 구현 #9 */
+ 
+}
+
+.card-actions .delete-button {
+  color: white;
+  background-color: #ef4444;
+}
+
+.empty-message {
+  padding: 32px;
+  text-align: center;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-radius: 12px;
+}
+
+/* 화면이 좁아지면 1열로 변경한다. */
+@media (max-width: 800px) {
+  /* TODO: [1열 변경] 수강생 구현 #10 */
+ 
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중고차 목록 관리</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <!-- TODO: [페이지 헤더] 수강생 구현 #1 -->
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2>차량 정보 입력</h2>
+
+        <!-- 차령 정보 입력 폼 -->
+        <form id="carForm" class="car-form">
+          <!-- 제조사 정보 -->
+          <div class="form-row">
+            <!-- TODO: [제조사 목록] 수강생 구현 #2 -->
+          </div>
+
+          <!-- 모델명 -->
+          <div class="form-row">
+            <!-- TODO: [모델명] 수강생 구현 #3 -->
+          </div>
+
+          <!-- 연식 -->
+          <div class="form-row">
+            <!-- TODO: [연식] 수강생 구현 #4 -->
+          </div>
+
+          <!-- 주행거리 -->
+          <div class="form-row">
+            <!-- TODO: [주행거리(Km)] 수강생 구현 #5 -->
+          </div>
+
+          <!-- 가격 -->
+          <div class="form-row">
+            <!-- TODO: [가격(만원)] 수강생 구현 #6 -->
+          </div>
+
+          <!-- 연료 -->
+          <div class="form-row">
+            <!-- TODO: [연료 목록] 수강생 구현 #7 -->
+          </div>
+
+          <!-- 판매 상태 -->
+          <div class="form-row">
+            <!-- TODO: [판매 상태 목록] 수강생 구현 #8 -->
+          </div>
+          <!-- 등록 / 취소 버튼 -->
+          <div class="button-area">
+            <!-- TODO: [등록/취소 버튼] 수강생 구현 #9 -->
+          </div>
+        </form>
+      </section>
+
+      <!-- 차량 목록 -->
+      <section class="list-card">
+        <div class="list-header">
+          <h2>차량 목록</h2>
+          <p id="countText">전체 0대 / 표시 0대</p>
+        </div>
+
+        <!-- 차량 검색 -->
+        <div class="search-area">
+          <!-- TODO: [차량 검색 및 필터 목록] 수강생 구현 #10 -->
+        </div>
+
+        <!-- empty 메시지 -->
+        <p id="emptyMessage" class="empty-message">등록된 차량이 없습니다.</p>
+
+        <!-- 차량 목룍 -->
+        <div id="carList" class="car-list"></div>
+      </section>
+    </main>
+  </body>
+</html>
