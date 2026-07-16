@@ -1,0 +1,105 @@
+/* 모든 요소의 크기 계산 방식을 통일한다. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "맑은 고딕", sans-serif;
+  background-color: #f3f4f6;
+  color: #222;
+}
+
+/* 전체 앱 영역 */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 24px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  color: #666;
+}
+
+/* 입력 폼 */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.todo-form button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #2563eb;
+  cursor: pointer;
+}
+
+/* 할 일 목록 */
+.todo-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+}
+
+/* 할 일 1개 항목 */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 10px;
+  padding: 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+/* 완료된 할 일 */
+.todo-item.done span {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* 완료, 삭제 버튼 영역 */
+.todo-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.todo-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.done-button {
+  background-color: #e5e7eb;
+}
+
+.delete-button {
+  color: white;
+  background-color: #ef4444;
+}

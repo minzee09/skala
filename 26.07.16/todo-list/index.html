@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoList 실습</title>
+
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript 파일 연결 -->
+  <!-- defer는 HTML을 먼저 읽은 뒤 JavaScript를 실행하게 한다. -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>TodoList</h1>
+    <p class="description">오늘 해야 할 일을 입력하고 관리해 봅니다.</p>
+
+    <!-- 할 일 입력 폼 -->
+    <form id="todoForm" class="todo-form">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하세요"
+        autocomplete="off"
+      >
+      <button type="submit">추가</button>
+    </form>
+
+    <!-- 할 일 목록이 출력될 영역 -->
+    <ul id="todoList" class="todo-list"></ul>
+  </main>
+</body>
+</html>
