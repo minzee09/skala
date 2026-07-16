@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, "맑은 고딕", sans-serif;
+  font-family: Arial, '맑은 고딕', sans-serif;
   color: #222;
   background-color: #f3f4f6;
 }
@@ -81,6 +81,29 @@ select {
   padding: 11px 12px;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
+}
+
+/* Safari는 select를 네이티브 컨트롤로 그려 세로 패딩을 무시하므로 직접 스타일링 적용 */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23475569' stroke-width='1.5' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+/* 숫자 입력칸의 위아래 스피너 버튼 제거 */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 input:focus,
