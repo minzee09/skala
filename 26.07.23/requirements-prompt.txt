@@ -1,0 +1,13 @@
+# LangChain RAG
+langchain-core              # LangChain 핵심 인터페이스 및 LCEL
+langchain-community         # FAISS, 문서 로더 등 Community 기능
+langchain-openai            # OpenAI 모델 및 Embedding 연동
+langchain-text-splitters    # 문서를 일정 크기의 청크로 분할
+faiss-cpu                   # CPU 기반 벡터 검색 라이브러리
+pypdf                       # PDF 문서 읽기 및 텍스트 추출
+
+# Environment Variables
+python-dotenv>=1.0          # .env 파일에서 OpenAI API Key 로드
+
+# Jupyter Notebook Widgets
+ipywidgets                  # Jupyter Notebook 대화형 위젯 지원
